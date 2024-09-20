@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,11 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY =os.getenv('SECRET_KEY')
+SECRET_KEY ='django-insecure-(c7hxhewok^z_3=4j_&9^1kj2a7r-*z56^a!zxx+ml$xd#8s=p'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DJANGO_DEBUG','False') == 'True'
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','exnewsme.vercel.app','now.sh']
+ALLOWED_HOSTS = ['exnewsme.vercel.app','.vercel.app','now.sh']
 
 
 # Application definition
@@ -60,7 +57,7 @@ ROOT_URLCONF = 'exnewsme.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

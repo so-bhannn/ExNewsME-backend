@@ -17,14 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from news import views
-from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
    path('admin/', admin.site.urls),
+   path('',views.index, name='index'),
    path('news/', views.NewsArticleListView.as_view(), name='news-list'),
    path('news/<int:pk>/', views.NewsArticleDetailView.as_view(), name='news-detail'),
    path('news/create/', views.NewsArticleCreateView.as_view(), name='news-create'),
    path('news/<int:pk>/update/', views.NewsArticleUpdateView.as_view(), name='news-update'),
+   path('news/<int:pk>/delete/', views.NewsArticleDeleteView.as_view(), name='news-delete'),
    path('login/', views.CustomAuthToken.as_view()),
-   path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 ]

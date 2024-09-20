@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>exNewsMe-Backend Docs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffcc00;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #b0b0b0;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .endpoint {
+            background-color: #333333;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .endpoint:hover {
+            transform: translateY(-5px);
+        }
+        .endpoint p {
+            margin: 5px 0;
+        }
+        .path {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        .footer i {
+            color: #ff0000;
+        }
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .endpoint {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>exNewsMe-Backend Docs</h1>
+        <p>This is a News App backend server which has a few endpoints, written in Python using Django and Django Rest Framework</p>
+        
+        <div class="endpoint">
+            <p class="path">Path: /login</p>
+            <p>Description: Provides a custom authentication token endpoint for user login.</p>
+        </div>
+        
+        <div class="endpoint">
+            <p class="path">Path: /news</p>
+            <p>Description: Provides a list of news articles with filtering, ordering, and pagination capabilities.</p>
+        </div>
+        
+        <div class="endpoint">
+            <p class="path">Path: /news/{id}</p>
+            <p>Description:(pk:Primary Key) Provides a single news article with the given id or primary key.</p>
+        </div>
+        
+        <div class="endpoint">
+            <p class="path">Path: /news/create</p>
+            <p>Description:Handles the creation of a new news article, including image upload.</p>
+        </div>
+        
+        <div class="endpoint">
+            <p class="path">Path: /news/{id}/update</p>
+            <p>Description:(pk:Primary Key) PUT:Handles the update of an existing news article, including image upload, with permission checks.</p>
+        </div>
+        
+        <div class="endpoint">
+            <p class="path">Path: /news/{id}/delete</p>
+            <p>Description:(pk:Primary Key) Handles the deletion of a specific news article by its id or primary key.</p>
+        </div>
+        
+        <div class="footer">
+            Made with <i class="fas fa-heart"></i> by <a href="#">so-bhannn</a>
+        </div>
+    </div>
+</body>
+</html>

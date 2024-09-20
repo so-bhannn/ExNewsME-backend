@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import NewsArticle
@@ -10,6 +11,10 @@ from rest_framework.authentication import TokenAuthentication
 from .permissions import IsNewsArticleOwner
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
+
+
+def index(request):
+    return render(request,'index.html')
 
 class NewsArticleListView(APIView):
     queryset = NewsArticle.objects.all()
